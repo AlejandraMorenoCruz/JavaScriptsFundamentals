@@ -119,17 +119,38 @@ document.writeln(`el número tiene ${cientosArr[2]} unidades`);*/
 
 // Regresa todos los caracteres que no sean letras de una cadena
 
-
+/*
+let noLetra=prompt('ingresa una frase con números');
+let arregloNoLetra=[];
+let Regetz=/[A-Za-z]/;
+for (let i=0; i<noLetra.length;i++){
+  if (!noLetra[i].match(Regetz)){
+    arregloNoLetra.push(noLetra[i]);
+  }
+}document.writeln(`los carácteres ${noLetra.join(' ')} no son letras`);*/
 
 // Haz una función que lanza un error con el mensaje dado por el usuario
 
+/*
+function myError(){
+  let message=prompt('Escribe un mensaje de error');
+  throw new Error(message);
+}*/
 
 // Extiende la función anterior para atrapar el error e imprimir su mensaje y stack
 
+/*
+function nuevoError(){
+  try {
+    myError();
+  } catch (Error) {
+    document.writeln('upsi');
+  }
+}*/
 
 // Suma los contenidos de un arreglo de números
 
-var pos=0;
+/*var pos=0;
 function sumar(arr){
   if (pos<arr.length){
     let valor=arr[pos];
@@ -141,11 +162,18 @@ function sumar(arr){
     return 0;
   }
 }
-sumar([2,3,5,6,7]);
+sumar([2,3,5,6,7]);*/
 
-
-//Aquí van todos los que no hice
 // Regresa un arreglo nuevo con el cuadrado de cada valor del arreglo original
+
+function square(){
+  let array = [2,3,4,5,6,7,8,9];
+  let arrayArray=[];
+  for (let i=0; i<array.length;i++){
+    arrayArray.push(Math.pow(Number(array[i]),2));
+  }
+}
+
 // Regresa que tipo de ángulo es el dado
 /*
   Agudo: 0 a 90 grados
@@ -153,6 +181,7 @@ sumar([2,3,5,6,7]);
   Obtuso: 90 a 180 grados
   Llano: 180 grados
 */
+
 // Regresa un arreglo nuevo sin los valores repetidos de un arreglo original
 // Quita los valores repetidos de un arreglo (sin usar otro arreglo)
 // Convierte un número binario dado por el usuario a decimal
@@ -166,12 +195,12 @@ let conteo = 0;
 miArray.forEach( function(valor, indice, array) {
     mi2Array.forEach(function(valor, indice, array){
       if (miArray[indice]==mi2Array[indice]) {
-        conteo++1;
+        conteo+=1;
         console.log(conteo);
       }
     }
 });
-
+});
 
 
 
