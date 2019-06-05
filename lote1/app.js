@@ -239,6 +239,28 @@ unaCadena.forEach(function(valor, indice){
 })
 
 // Dada una cadena, determina su valor de scrabble
+
+let unaPalabra=(prompt('Escribe una palabra y te digo su valor en scrabble'))toUpperCase().split('');
+let valor=0;
+unaPalabra.forEach(function(valor, indice){
+  if (unaPalabra[indice]==='E'||unaPalabra[indice]==='A'||unaPalabra[indice]==='I'||unaPalabra[indice]==='O'||unaPalabra[indice]==='N'||unaPalabra[indice]==='R'||unaPalabra[indice]==='T'||unaPalabra[indice]==='L'||unaPalabra[indice]==='S'||unaPalabra[indice]==='U') {
+    valor+=1;
+  }else if (unaPalabra[indice]==='D'||unaPalabra[indice]==='G') {
+    valor+=2;
+  }else if (unaPalabra[indice]==='B'||unaPalabra[indice]==='C'||unaPalabra[indice]==='M'||unaPalabra[indice]==='P') {
+    valor+=3;
+  }else if (unaPalabra[indice]==='F'||unaPalabra[indice]==='H'||unaPalabra[indice]==='V'||unaPalabra[indice]==='W'||unaPalabra[indice]==='Y') {
+    valor+=4;
+  }else if (unaPalabra[indice]==='K') {
+    valor+=5;
+  }else if (unaPalabra[indice]==='J'||unaPalabra[indice]==='X') {
+    valor+=8;
+  }else if (unaPalabra[indice]==='Q'||unaPalabra[indice]==='Z') {
+    valor+=10;
+  }
+}console.log(valor);
+})
+
 /*
   1: E, A, I, O, N, R, T, L, S, U
   2: D, G
@@ -249,6 +271,7 @@ unaCadena.forEach(function(valor, indice){
   10: Q, Z
 */
 // Determina si una cadena dada por el usuario es un acrónimo
+
 // Implementa una lista ligada
 // Implementa una lista doblemente ligada
 // Obten el Máximo común divisor de dos números dados
