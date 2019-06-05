@@ -165,15 +165,15 @@ function sumar(arr){
 sumar([2,3,5,6,7]);*/
 
 // Regresa un arreglo nuevo con el cuadrado de cada valor del arreglo original
-
-function square(){
+/*
+function cuadrado(){
   let array = [2,3,4,5,6,7,8,9];
   let arrayArray=[];
   for (let i=0; i<array.length;i++){
-    arrayArray.push(Math.pow(Number(array[i]),2));
-  }
-}
-
+    arrayArray.push( Math.pow( Number(array[i]), 2));
+  }console.log(arrayArray);
+}cuadrado();
+*/
 // Regresa que tipo de ángulo es el dado
 /*
   Agudo: 0 a 90 grados
@@ -181,40 +181,63 @@ function square(){
   Obtuso: 90 a 180 grados
   Llano: 180 grados
 */
+/*
+function guessAngle(angle) {
+  if (angle>0&&angle<90) {
+    console.log('Angulo agudo');
+  }else if (angle>90&&angle<180) {
+    console.log('Angulo obtuso');
+  }else if (angle==90) {
+    console.log('Angulo recto');
+  }else if (angle==180) {
+    console.log('Angulo llano');
+  }else {
+      console.log('Angulo cóncavo');
+  }
+} guessAngle(90);
+*/
 
 // Regresa un arreglo nuevo sin los valores repetidos de un arreglo original
+
+let noRepet = (value,index,self)=>{
+  return self.indexOf(value)===index;
+}
+const arrOrigin = [2,2,3,5,6,]
+let nuevoArr= arrOrigin.filter(noRepet);
+
 // Quita los valores repetidos de un arreglo (sin usar otro arreglo)
+
+let noRepet = (value,index,self)=>{
+  return self.indexOf(value)===index;
+}
+const arrOrigin = [2,2,3,5,6,]
+arrOrigin.filter(noRepet);
+
 // Convierte un número binario dado por el usuario a decimal
+
+console.log(parseInt(Number(prompt('ingresa un número binario')),2));
+
 // Convierte un número decimal dado por el usuario a binario, octal y hexadecimal (bases 2, 8 y 16)
+
+let numberUser=Number(prompt('ingresa un número en base decimal'));
+console.log(`el número ${numberUser} en bimario ${numberUser.toString(2)} en octal ${numberUser.toString(8)} y en hexadecimal ${numberUser.toString(0x)}`)
 
 // Regresa la cantidad de valores que comparten dos arreglos diferentes
 
-let miArray = [ 2, 4, 6, 8, 10, 12];
-let mi2Array =  [6, 8, 10, 5, 7, 9];
-let conteo = 0;
-miArray.forEach( function(valor, indice, array) {
-    mi2Array.forEach(function(valor, indice, array){
-      if (miArray[indice]==mi2Array[indice]) {
-        conteo+=1;
-        console.log(conteo);
-      }
-    }
-});
-});
-
-
-
-
-
-
-
-
-
-
-
-
+let miArray = new Set([ 2, 4, 6, 8, 10, 12]);
+let mi2Array =  new Set([6, 8, 10, 5, 7, 9]);
+let combinados = new Set([...miArray].filter(x=>!mi2Array.has(x)));
+console.log(combinados.length);
 
 // Valida que una cadena dada no tenga espacios en blanco
+
+let unaCadena=(prompt('Escribe algo')).split('');
+unaCadena.forEach(function(valor, indice){
+  if (unaCadena[indice]===' ') {
+    alert('La cadena tiene un espacio');
+  }
+})
+
 // Dada una cadena, determina su valor de scrabble
 /*
   1: E, A, I, O, N, R, T, L, S, U
