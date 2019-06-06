@@ -72,7 +72,7 @@ var a = 10;
 })();
 x();
 */
-      
+
 
 /*
 function leFunction() {
@@ -128,24 +128,3 @@ function b() {
 b();
 console.log(a);
 */
-
-/*
-  Crea una clase persona que recibe un nombre, apellido y edad
-  Agrega métodos para cambiar y obtener cada una de las propiedades
-  Agrega un método (describe) que regrese una cadena como esta:
-  {Nombre} {Apellido}, {edad} años.
-*/
-
-/*
-  Crea una clase Product que recibe un nombre y un valor
-  tiene un método (value) que regresa su valor con iva (x1.16)
-
-  Crea otra clase Cart que recibe un arreglo de Product
-  tiene un método (add) que recibe un Product y lo agrega a su lista
-  tiene un método (total) que regresa el total de todos los Product(con iva)
-
-  Crea otra clase Food que hereda de product
-  su método value regresa el valor sin iva
-  Esta clase debería poder usarse en Cart
-*/
-Contraer

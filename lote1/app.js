@@ -207,11 +207,11 @@ let nuevoArr= arrOrigin.filter(noRepet);
 
 // Quita los valores repetidos de un arreglo (sin usar otro arreglo)
 
-let noRepet = (value,index,self)=>{
+let noRepet2 = (value,index,self)=>{
   return self.indexOf(value)===index;
 }
-const arrOrigin = [2,2,3,5,6,]
-arrOrigin.filter(noRepet);
+const arrOrigi2n = [2,2,3,5,6,]
+arrOrigin2.filter(noRepet2);
 
 // Convierte un número binario dado por el usuario a decimal
 
@@ -270,8 +270,46 @@ unaPalabra.forEach(function(valor, indice){
   8: J, X
   10: Q, Z
 */
-// Determina si una cadena dada por el usuario es un acrónimo
+// Determina si una cadena dada por el usuario es un palindromo
+// Expresiones regulares
 
 // Implementa una lista ligada
+
+var listaLigada={
+  inicio:0,
+  valores:[1,2,3],
+  agregar:(valor)=>listaLigada.valores.push(valor),
+  siguiente:()=>{
+    if (listaLigada.valores.length-1 == listaLigada.inicio) {
+      listaLigada.inicio=0;
+    }else{
+      listaLigada.inicio=listaLigada.inicio+1;
+    }
+    return listaLigada.valores[listaLigada.inicio];
+  }
+};
+
 // Implementa una lista doblemente ligada
+
+var listaDobleLigada={
+  inicio:0,
+  valores:[1,2,3],
+  agregar:(valor)=>listaDobleLigada.valores.push(valor),
+  siguiente:()=>{
+    if (listaDobleLigada.valores.length-1 == listaDobleLigada.inicio) {
+      listaDobleLigada.inicio=0;
+    }else{
+      listaDobleLigada.inicio=listaDobleLigada.inicio+1;
+    }
+    return listaDobleLigada.valores[listaDobleLigada.inicio];
+  },
+  anterior:()=>{
+    if (listaDobleLigada.inicio==0) {
+      listaDobleLigada.inicio=listaDobleLigada.valores.length-1;
+    }else{
+      listaDobleLigada.inicio=listaDobleLigada.inicio-1;
+    }
+    return listaDobleLigada.valores[listaDobleLigada.inicio];
+  }
+};
 // Obten el Máximo común divisor de dos números dados
